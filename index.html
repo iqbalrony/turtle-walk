@@ -5,77 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turtle Walk</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <style>
-        body{
-            overflow: hidden;
-            margin: 8px;
-            width: calc(100vw - 16px);
-            height: calc(100vh - 16px);
-            background-image: url(https://forum.videohelp.com/attachments/30382-1424562164/Bubbles3.gif);
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-        }
-        .turtle{
-            width: 150px;
-            --x: 0px;
-            --y: 0px;
-            --rotateY: 0deg;
-            --rotate: 0deg;
-            transform: translateX(var(--x)) translateY(var(--y)) rotateY(var(--rotateY)) rotate(var(--rotate));
-            transition: all 0.3s;
-        }
-    </style>
-   <!-- <img src="img/turtle.png" alt="turtle" class="turtle"> -->
-   <!-- <img src="https://static.wixstatic.com/media/95115d_75e2e4d9908e420f8c59c486ebb081d5~mv2_d_2000_1332_s_2.png/v1/fill/w_540,h_360,al_c,q_85,usm_0.66_1.00_0.01/2000px-Turtle_clip_art_svg.webp" alt="turtle" class="turtle"> -->
-   <img class="turtle" src="https://i.gifer.com/1aGE.gif" alt="turtle">
-    <script>
-        var turtle = document.querySelector('.turtle');
-        // console.log(turtle);
-        var x = 0,
-            y = 0,
-            speed = 50,
-            rotateY = '0deg',
-            rotate = '0deg',
-            winWidth = window.innerWidth - 16,
-            winHeight = window.innerHeight - 16;
-        function handleTurtleWalk(e){
-            if( !e.key.includes('Arrow') ){
-                return;
-            }
-            switch( e.key ){
-                case 'ArrowRight':
-                    x = x + 1;
-                    rotateY = '0deg';
-                    rotate = '0deg';
-                    break;
-                case 'ArrowLeft':
-                    x = x - 1;
-                    rotateY = '185deg';
-                    rotate = '0deg';
-                    break;
-                case 'ArrowDown':
-                    y = y + 1;
-                    rotate = '90deg';
-                    break;
-                case 'ArrowUp':
-                    y = y - 1;
-                    rotate = '-90deg';
-                    break;
-            }
-            turtle.setAttribute('style',`
-                    --x: ${x * speed}px;
-                    --y: ${y * speed}px;
-                    --rotateY: ${rotateY};
-                    --rotate: ${rotate};
-                `
-            );
-        }
-        window.addEventListener('keydown', handleTurtleWalk);
-    </script>
+    
+    <img class="turtle" src="https://i.gifer.com/1aGE.gif" alt="turtle">
+    
+    <script src="js/script.js"></script>
 </body>
 
 </html>
