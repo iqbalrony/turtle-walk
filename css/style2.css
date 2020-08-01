@@ -1,0 +1,21 @@
+body {
+    overflow: hidden;
+    margin: 8px;
+    width: calc(100vw - 16px);
+    height: calc(100vh - 16px);
+    background-image: url(https://forum.videohelp.com/attachments/30382-1424562164/Bubbles3.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+.turtle {
+    width: 150px;
+    --x: 0px;
+    --y: 0px;
+    --rotateY: 0deg;
+    --rotate: 0deg;
+    transform: translateX(var(--x)) translateY(var(--y)) rotateY(var(--rotateY)) rotate(var(--rotate));
+    transition: all 0.3s;
+}
